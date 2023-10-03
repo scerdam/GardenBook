@@ -1,14 +1,141 @@
-<p style="color: green"><%= notice %></p>
+<div class="mx-auto max-w-2xl py-6 sm:px-6 lg:px-8">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Waters</h1>
+ <h1 class="text-3xl font-bold underline">Waters</h1>
 
-<div id="waters">
-  <% @waters.each do |water| %>
-    <%= render water %>
-    <p>
-      <%= link_to "Show this water", water %>
-    </p>
-  <% end %>
+  <div id="waters">
+    <% @waters.each do |water| %>
+      <%= render water %>
+      <p>
+        <%= link_to "Show this water", water %>
+      </p>
+    <% end %>
+  </div>
+  <%= link_to "New water", new_water_path %>
 </div>
 
-<%= link_to "New water", new_water_path %>
+
+<fieldset class="mt-4">
+              <legend class="sr-only">Choose a size</legend>
+              <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-not-allowed bg-gray-50 text-gray-200">
+                  <input type="radio" name="size-choice" value="XXS" disabled class="sr-only" aria-labelledby="size-choice-0-label">
+                  <span id="size-choice-0-label">XXS</span>
+                  <span aria-hidden="true" class="pointer-events-none absolute -inset-px rounded-md border-2 border-gray-200">
+                    <svg class="absolute inset-0 h-full w-full stroke-2 text-gray-200" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                      <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke" />
+                    </svg>
+                  </span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="XS" class="sr-only" aria-labelledby="size-choice-1-label">
+                  <span id="size-choice-1-label">XS</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="S" class="sr-only" aria-labelledby="size-choice-2-label">
+                  <span id="size-choice-2-label">S</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="M" class="sr-only" aria-labelledby="size-choice-3-label">
+                  <span id="size-choice-3-label">M</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="L" class="sr-only" aria-labelledby="size-choice-4-label">
+                  <span id="size-choice-4-label">L</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="XL" class="sr-only" aria-labelledby="size-choice-5-label">
+                  <span id="size-choice-5-label">XL</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="2XL" class="sr-only" aria-labelledby="size-choice-6-label">
+                  <span id="size-choice-6-label">2XL</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+                <!-- Active: "ring-2 ring-indigo-500" -->
+                <label class="group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 cursor-pointer bg-white text-gray-900 shadow-sm">
+                  <input type="radio" name="size-choice" value="3XL" class="sr-only" aria-labelledby="size-choice-7-label">
+                  <span id="size-choice-7-label">3XL</span>
+                  <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                  <span class="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
+                </label>
+              </div>
+            </fieldset>
+
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Products</h2>
+
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Nomad Tumbler</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Focus Paper Refill</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
+      </a>
+      <a href="#" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Machined Mechanical Pencil</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+      </a>
+
+      <!-- More products... -->
+    </div>
+  </div>
+</div>
