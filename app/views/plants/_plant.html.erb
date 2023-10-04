@@ -1,22 +1,55 @@
 <div id="<%= dom_id plant %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= plant.name %>
-  </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Last watering:</strong>
-    <%= plant.last_watering %>
-  </p>
+  <header class="bg-white shadow">
+    <div class="container mx-auto max-w-2xl px-4 py-6 sm:px-6 lg:px-8">
+    <div class="float-right">
+      <div class=" flex items-center justify-center">
+        <button class="bg-emerald-700 hover:bg-emerald-800 text-gray-50 font-semibold py-2 px-4 mt-5 rounded-full shadow-md">        
+          <div class="flex items-center">
+            <img class="h-5 w-5" src="https://cdn-icons-png.flaticon.com/512/4007/4007747.png">
+            <div>
+              &ensp;New Watering
+            </div>
+          </div>
+        </button>      
+      </div>
+    </div>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+        <%= plant.name %><br>
+        <small class="text-gray-400 font-light">
+          <div class="flex items-center">
+            <img class="h-4 w-4" src="https://images.emojiterra.com/twitter/512px/1f4a7.png">&nbsp;<%= plant&.last_watering&.strftime("%A, %B %d, %Y") %>
+          </div>
+        </small>
+      </h1>
+    </div>
+  </header>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Plant type:</strong>
-    <%= plant.plant_type %>
-  </p>
 
-  <% if action_name != "show" %>
-    <%= link_to "Show this plant", plant, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this plant', edit_plant_path(plant), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+  <div class="container mx-auto max-w-2xl py-6 sm:px-6 lg:px-8">
+    <p style="color: green"><%= notice %></p>
+
+      <small class="text-gray-400 font-light">
+        <div class="flex items-center">
+          <%= plant.plant_type %>
+        </div>
+      </small>
+
+      <h1 class="text-3xl font-bold underline">
+      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) 
+      </h1>
+
+      <h1 class="text-3xl font-bold underline font-">
+        <% if action_name != "show" %>
+          <%= link_to "Show this plant", plant, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+          <%= link_to 'Edit this plant', edit_plant_path(plant), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+          <hr class="mt-6">
+        <% end %>
+      </h1>
+  </div>
+
 </div>
+
+
+
+
