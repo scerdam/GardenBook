@@ -1,49 +1,13 @@
-
-
-<header class="bg-white shadow">
-  <div class="mx-auto max-w-2xl px-4 py-6 sm:px-6 lg:px-8">
-  <div class="float-right">
-    <div class=" flex items-center justify-center">
-      <button class="bg-emerald-700 hover:bg-emerald-800 text-gray-50 font-semibold py-2 px-4 mt-5 rounded-full shadow-md">        
-        <div class="flex items-center">
-          <img class="h-5 w-5" src="https://cdn-icons-png.flaticon.com/512/4007/4007747.png">
-          <div>
-            &ensp;New Watering
-          </div>
-        </div>
-      </button>      
-    </div>
-  </div>
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-      Monstera deliciosa<br>
-      <small class="text-gray-400 font-light">
-        <div class="flex items-center">
-          <img class="h-4 w-4" src="https://images.emojiterra.com/twitter/512px/1f4a7.png">&nbsp;11 days ago
-        </div>
-      </small>
-    </h1>
-  </div>
-</header>
-
-
 <div class="mx-auto max-w-2xl py-6 sm:px-6 lg:px-8">
   <p style="color: green"><%= notice %></p>
+  <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Badge</span>
 
-  <h1 class="text-3xl font-bold underline">
-  Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) 
-  </h1>
+  <%= render @water %>
 
-<p style="color: green"><%= notice %></p>
+  <div>
+    <%= link_to "Edit this water", edit_water_path(@water) %> |
+    <%= link_to "Back to waters", waters_path %>
 
-<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Badge</span>
-
-<%= render @water %>
-
-<div>
-  <%= link_to "Edit this water", edit_water_path(@water) %> |
-  <%= link_to "Back to waters", waters_path %>
-
-  <%= button_to "Destroy this water", @water, method: :delete %>
-</div>
-
+    <%= button_to "Destroy this water", @water, method: :delete %>
+  </div>
 </div>
