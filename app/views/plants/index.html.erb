@@ -2,13 +2,20 @@
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Plants</h1>
-    <%= link_to 'New plant', new_plant_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
   <div id="plants" class="min-w-full">
-    <%= render @plants %>
+    <div class="bg-white">
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div class="flex justify-between items-center">
+          <h1 class="font-bold text-4xl">Plants</h1>
+          <%= link_to 'New plant', new_plant_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+        </div>
+        <br>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          <%= render @plants %>
+        </div>    
+      </div>
+    </div>
   </div>
+
+
 </div>
